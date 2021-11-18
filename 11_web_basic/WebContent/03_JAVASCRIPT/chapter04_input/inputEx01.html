@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prompt</title>
+<script>
+	/*
+	
+		[형식]
+		
+		prompt("안내문자열","기본값");
+		- 기본값은 생략 가능하다.
+		- 기본 데이터 타입은 문자열이다.
+	*/
+	
+	var getData = prompt("사용 언어를 입력하세요 : ", "javascript");
+	document.write(getData + " " + typeof getData + " <br><br>");
+
+	var htmlGradeGrade = prompt("html점수", "0");
+	var CssGrade = prompt("css점수", "0");
+	var jsGrade=prompt("js점수", "0");
+	
+	var totalGrade = Number(htmlGradeGrade) + Number(cssGrade) + Number(jsGrade);
+	document.write("총점" + totalGrade);
+	
+
+</script>
+</head>
+<body>
+</body>
+</html>
