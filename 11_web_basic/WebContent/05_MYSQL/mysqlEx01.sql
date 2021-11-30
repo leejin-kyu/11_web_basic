@@ -87,14 +87,15 @@ DESC MEMBER;
 /*
 
 	[ 레코드(데이터) 추가 형식 ]
-    
+   
 	- INSERT INTO TABLE_NAME(FIELD1,FIELD2,....) VALUES('VAL1','VAL2',....);
 	- 모든 컬럼의 데이터가 입력되면 필드명 입력을 생략할수 있다.
    
    EX) 
 		INSERT INTO MEMBER(NO,NAME,PHONE) VALUES('1','JAMES','111-111');    # 모든 필드의 데이터가 입력
 		INSERT INTO MEMBER ('1','JAMES','111-111');							# 모든 필드의 데이터가 입력되어 필드명을 생략
-		INSERT INTO MEMBER(NAME) VALUES('JOHN');							# 특정 필드의 데이터만 입력			
+		INSERT INTO MEMBER(NAME) VALUES('JOHN');							# 특정 필드의 데이터만 입력
+			
 	
 */
 INSERT INTO		
@@ -107,6 +108,7 @@ INSERT INTO
 VALUES 
 		(2 , "이영희" , 165.3 , 50.3 , 'f' , "여자사람");
 
+
 INSERT INTO
 		MEMBER(NAME)
 VALUES
@@ -115,7 +117,9 @@ VALUES
 INSERT INTO
 		MEMBER(NUM)
 VALUES
-		(3);     
+		(3);
+        
+	
 
 /*
 
@@ -186,7 +190,20 @@ FROM
 
 */
 
+UPDATE
+		MEMBER
+SET
+		WEIGHT = 90.2,
+        HEIGHT = (HEIGHT + 1)
+WHERE
+		NUM=1;
 
+        
+        
+
+SELECT * FROM MEMBER;
+        
+        
   
 /*
 
@@ -203,6 +220,12 @@ FROM
 					NO=1;
 
 */
+DELETE FROM
+		MEMBER
+WHERE
+		NUM = 1;
+
+
 
 
 /*
@@ -225,7 +248,7 @@ FROM
 	- DROP TABLE TABLE_NAME;
 
 */
-
+DROP TABLE MEMBER;
 	
 
 /*
@@ -235,7 +258,7 @@ FROM
 		
 		EX) DROP DATABASE TEST_DB;
 */
-
+DROP DATABASE TEST_DB;
 
 
 
