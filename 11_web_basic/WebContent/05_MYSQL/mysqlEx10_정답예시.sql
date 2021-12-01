@@ -42,28 +42,3 @@ GROUP BY
 		DEPT_NO
 HAVING
 		COUNT(*) >= 3;
-
-
-
-# 문제 5) 생일이 1월 1일인 사원의 수를 조회하기. ( substring함수 사용 )
-
-SELECT 
-		BIRTH_DATE , 
-		COUNT(*) 
-FROM 
-		EMPLOYEES
-GROUP BY 
-		BIRTH_DATE
-HAVING
-		SUBSTRING(BIRTH_DATE , 6) = '01-01';
-
-SELECT
-		BIRTH_DATE ,
-    	COUNT(*)
-FROM
-		EMPLOYEES
-WHERE 
-		SUBSTRING(BIRTH_DATE,6) = '01-01'
-GROUP BY
-		BIRTH_DATE;
-
